@@ -26,6 +26,7 @@ body {
     width: 100%;
     height: 120px;
     padding: 20px 100px;
+    z-index: 100;
 }
 
 .header__block {
@@ -53,7 +54,7 @@ body {
     position: relative;
 }
 
-.contact-name::after , .work-name::after{
+.underline::after{
     content: "";
     display: block;
     position: absolute;
@@ -64,12 +65,7 @@ body {
     transition: width 0.4s;
 }
 
-.work-name::after {
-    width: 100%;
-    transition: none;
-}
-
-.contact-name:hover:after {
+.underline:hover::after, default::after  {
     width: 100%;
 }
 
@@ -86,4 +82,49 @@ body {
 .information {
     margin-top: 30px;
     font-size: 16px;
+}
+
+.categories {
+    margin-top: 30px;
+}
+
+.categories__names {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.categories a{
+    margin-right: 15px;
+    text-transform: uppercase;
+    color: #515151;
+    text-decoration: none;
+    position: relative;
+}
+
+.category:hover::after , .default::after{
+    width: 100%;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.image-block {
+    height: 440px;
+    width: 350px;
+    margin: 2.5px;
+    position: relative;
+}
+
+.image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
