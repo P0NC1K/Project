@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Abel' , sans-serif;
+    height: 100%;
+}
+
+@keyframes lazyloading {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.header__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 155px;
+}
+
+.header__logo-image {
+    width: 90px;
+    height: 90px;
+    animation: lazyloading 1s ;
+}
+
+.menus {
+    display: flex;
+    list-style: none;
+}
+
+.menus a {
+    margin-right: 25px;
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+.contact-name::after , .work-name::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    background: rgb(51, 51, 51);
+    width: 0px;
+    transition: width 0.4s;
+}
+
+.work-name::after {
+    width: 100%;
+    transition: none;
+}
+
+.contact-name:hover:after {
+    width: 100%;
+}
+
+.shit {
+    height: 2000px;
+}
