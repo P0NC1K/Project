@@ -94,11 +94,17 @@ body {
     list-style: none;
 }
 
-.categories a{
+.categories button{
     margin-right: 15px;
+    font-family: 'Abel' , sans-serif;
+    font-size: 15px;
     text-transform: uppercase;
     color: #515151;
     text-decoration: none;
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
     position: relative;
 }
 
@@ -119,6 +125,31 @@ body {
     margin: 2.5px;
     position: relative;
     display: none;
+}
+
+.image-link {
+
+}
+
+.hover-text {
+    display: none;
+    color: rgb(51, 51, 51);
+    font-size: 40px;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+}
+
+.image {
+    transition: all .5s;
+}
+
+.image-block:hover img{
+    opacity: 0.2;
+}
+
+.image-block:hover h2 {
+    display: block;
 }
 
 .image {
